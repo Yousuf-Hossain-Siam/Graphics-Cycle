@@ -1,13 +1,22 @@
 import 'package:get/get.dart';
-
-import '../features/authentication/presentation/screens/login_screen.dart';
+import 'package:graphics_cycle/features/splash/screens/splash_screen.dart';
+import 'package:graphics_cycle/features/home/screens/home_screen.dart';
 
 class AppRoute {
+  static String splashScreen = "/splashScreen";
   static String loginScreen = "/loginScreen";
+  static String homeScreen = "/homeScreen";
 
-  static String getLoginScreen() => loginScreen;
+  static String getSplashScreen() => splashScreen;
 
   static List<GetPage> routes = [
-    GetPage(name: loginScreen, page: () => const LoginScreen()),
+    GetPage(
+      name: '/splashScreen',
+      page: () => const SplashScreen(),
+    ),
+    GetPage(
+      name: '/homeScreen',
+      page: () => const HomeScreen(),
+    ),
   ];
 }
